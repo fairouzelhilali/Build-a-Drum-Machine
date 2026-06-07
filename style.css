@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: 0.3s;
+}
+
+/* Light Theme */
+body.light {
+  background: #f2f2f2;
+  color: black;
+}
+
+/* Dark Theme */
+body.dark {
+  background: radial-gradient(circle, #1e1e2f, #0f0f17);
+  color: white;
+}
+
+#drum-machine {
+  background: rgba(255,255,255,0.08);
+  padding: 20px;
+  border-radius: 15px;
+  width: 340px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+#display {
+  padding: 10px;
+  margin-bottom: 10px;
+  background: rgba(0,0,0,0.5);
+  border-radius: 8px;
+}
+
+.pad-container {
+  display: grid;
+  grid-template-columns: repeat(3, 90px);
+  gap: 10px;
+  justify-content: center;
+}
+
+.drum-pad {
+  height: 80px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(145deg, #ff9f43, #ff6b6b);
+  transition: 0.15s;
+}
+
+.drum-pad:active,
+.drum-pad.active {
+  transform: scale(0.9);
+  box-shadow: 0 0 15px gold;
+}
+
+.controls {
+  margin-top: 15px;
+}
+
+button {
+  margin: 5px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
